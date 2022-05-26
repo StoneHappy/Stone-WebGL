@@ -1,10 +1,10 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
+import { LOG_INFO } from "../Runtime/Core/Log";
 import Navbar from "./components/Navbar";
 
 import "./main.css"
-
-import Log from "../Runtime/Core/Log";
+LOG_INFO("Init Stone.....");
 
 function App() {
       return (
@@ -14,7 +14,6 @@ function App() {
       );  
 }
 
-Log("asdasd");
 const container = document.getElementById('root');
 const root = createRoot(container);
 
