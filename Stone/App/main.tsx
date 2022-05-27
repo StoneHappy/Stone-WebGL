@@ -16,6 +16,7 @@ function App() {
             <Spaces.Top size = "3%" className = "TopSpace"></Spaces.Top>
             <Spaces.Fill>
                 <Spaces.LeftResizable size="20%" className = "LeftSpace" minimumSize={200} maximumSize={400}></Spaces.LeftResizable>
+                <Spaces.Fill></Spaces.Fill>
             </Spaces.Fill>
         </Spaces.ViewPort>
     );
