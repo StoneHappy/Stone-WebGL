@@ -38,6 +38,7 @@
     "consola": "^2.15.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-spaces": "^0.3.2",
     "twgl.js": "^4.22.1"
   }
 }
