@@ -13,10 +13,3 @@ nav {
     max-width: 100px;
     object-fit: contain;
 }
-
-.LeftSpace {
-    background-color: gray;
-}
-.TopSpace {
-    background-color: red;
-}

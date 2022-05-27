@@ -22,6 +22,8 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
@@ -37,8 +39,8 @@
   "dependencies": {
     "consola": "^2.15.3",
     "react": "^18.1.0",
+    "react-aria-menubutton": "^7.0.3",
     "react-dom": "^18.1.0",
-    "react-spaces": "^0.3.2",
     "twgl.js": "^4.22.1"
   }
 }

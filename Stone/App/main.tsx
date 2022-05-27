@@ -1,24 +1,16 @@
-import React from "react";
+import ReactDOM from 'react-dom';
+import React from "react"
 import { createRoot } from 'react-dom/client';
 import { LOG_INFO } from "../Runtime/Core/Log";
 
 import Navbar from "./components/Navbar";
 
-import * as Spaces from "react-spaces";
-
-
-
 import "./main.css"
+import File from './components/Menu';
 
 function App() {
     return (
-        <Spaces.ViewPort>
-            <Spaces.Top size = "3%" className = "TopSpace"></Spaces.Top>
-            <Spaces.Fill>
-                <Spaces.LeftResizable size="20%" className = "LeftSpace" minimumSize={200} maximumSize={400}></Spaces.LeftResizable>
-                <Spaces.Fill></Spaces.Fill>
-            </Spaces.Fill>
-        </Spaces.ViewPort>
+        <File></File>
     );
 }
 
