@@ -6,7 +6,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, '../src/App/main.js'),
+        main: path.resolve(__dirname, '../Stone/App/main.tsx'),
     },
     output: {
         filename: 'bundle.js',
@@ -15,7 +15,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/tample.html')
+            template: path.resolve(__dirname, '../Stone/temple.html')
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -25,9 +25,11 @@ module.exports = {
     ],
 
     devServer: {
-        static:'./static'
+        static: './static'
     },
-
+    resolve: {
+        extensions: ['.ts', '.js', '.tsx']
+    },
     module: {
         rules: [
 
@@ -37,17 +39,23 @@ module.exports = {
             },
 
             {
+                test: /\.(vert|frag)$/,
+                use: ['raw-loader']
+            },
+
+            {
                 test: /\.(svg|png|jpg|gif)$/,
                 type: 'asset/resource'
             },
 
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use:
-                    [
-                        'babel-loader'
-                    ]
+                test: /\.(ts|tsx)$/,
+                exclude: [/node_modules/, /dist/],
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    },
+                ],
             },
             {
                 test: /\.css$/,
